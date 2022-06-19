@@ -97,6 +97,10 @@ async function deleteFavouriteMichi(id) {
     }
 }
 
+async function uploadMichiPhoto() {
+    
+}
+
 loadRandomMichis();
 loadFavoriteMichis();
 

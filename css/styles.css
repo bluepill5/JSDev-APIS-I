@@ -23,12 +23,6 @@ body {
     border-radius: .5rem;
 }
 
-/* @media only screen and (min-width: 700px) {
-    .imgsContainer { 
-        grid-template-columns: repeat(1, 1fr); 
-    }
-} */
-
 .imgContainer {
     padding: 1rem;
     display: flex;
@@ -41,6 +35,53 @@ body {
     border-radius: .5rem;
     justify-self: center;
 }
+
+.formContainer {
+    background-color:rgb(189, 189, 189);
+    margin-inline: 1rem;
+    margin-block: 2rem;
+    padding-inline: 3rem;
+    padding-block: 1rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    justify-self: center;
+}
+
+.input-style > input {
+    width: 100%;
+    border: 1px solid white;
+    border-radius: .5rem;
+}
+
+.input-style {
+    border: 1px solid black;
+    background-color: rgb(44, 58, 70);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+    border-radius: .5rem;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+input[type=file]::file-selector-button {
+    background-color: orangered;
+    margin: 1rem;
+    font-size: .8rem;
+    color: white;
+    font-weight: bold;
+    border-radius: .5rem;
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    cursor: pointer;
+}
+
 
 .container-button {
     text-align: center;
@@ -70,6 +111,17 @@ body {
 
 .button-style-del {
     background-color: rgb(218, 54, 42);
+    font-size: .8rem;
+    color: white;
+    font-weight: bold;
+    border-radius: .5rem;
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    cursor: pointer;
+}
+
+.button-style-submit {
+    background-color: rgb(53, 100, 94);
     font-size: .8rem;
     color: white;
     font-weight: bold;
