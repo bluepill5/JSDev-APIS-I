@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Gatitos</title>
+  </head>
+  <body>
+    <h1 class="header-style">Michis App</h1>
+
+    <span id="error"></span>
+
+    <section class="container" id="randomMichis">
+      <h2 class="header-style">Michis aleatorios</h2>
+      <div class="imgsContainer">
+        <div class="imgContainer">
+          <img alt="Foto gatito aleatorio" width="250" id="img1" />
+          <button id="btn1" class="button-style-fav">
+            Guardar michi
+          </button>
+        </div>
+        <div class="imgContainer">
+          <img alt="Foto gatito aleatorio" width="250" id="img2" />
+          <button id="btn2" class="button-style-fav">
+            Guardar michi
+          </button>
+        </div>
+        <div class="imgContainer">
+          <img alt="Foto gatito aleatorio" width="250" id="img3" />
+          <button id="btn3" class="button-style-fav">
+            Guardar michi
+          </button>
+        </div>
+      </div>
+      <div class="container-button">
+        <button class="button-style" onclick="loadRandomMichis()">
+          Recargar
+        </button>
+      </div>
+    </section>
+
+    <section id="favoritesMichis">
+      <h2 class="header-style">Michis favoritos</h2>
+      <div class="imgsContainer"></div>
+    </section>
+
+    <script src="./src/main.js"></script>
+  </body>
+</html>
