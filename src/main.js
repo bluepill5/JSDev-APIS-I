@@ -3,6 +3,7 @@ const API_KEY = 'c42f2028-4966-46f9-bf88-a6055e363547';
 const API_URL_RANDOM = `https://api.thecatapi.com/v1/images/search?limit=${n}`;
 const API_URL_FAVOURITES = `https://api.thecatapi.com/v1/favourites`;
 const API_URL_FAVOURITES_DEL = id => `https://api.thecatapi.com/v1/favourites/${id}`;
+const API_URL_UPLOAD = `https://api.thecatapi.com/v1/images/upload`;
 
 const spanError = document.getElementById('error');
 
@@ -98,7 +99,25 @@ async function deleteFavouriteMichi(id) {
 }
 
 async function uploadMichiPhoto() {
+    const form = document.getElementById('uploadForm');
+    const formData = new FormData(form);
+
+    const res = await fetch(API_URL_UPLOAD, {
+        method: 'POST',
+        headers: {
+            'X-API-KEY': API_KEY,
+        },
+        body: formData,
+    });
+
+    const data = await res.json();
+
+    if(res.status !== 201) {
+        spanError.innerHTML = 'Hubo un error: ' + res.status + ' ' + data.message;
     
+    } else {
+        saveFavouriteMichi(data.id);
+    }
 }
 
 loadRandomMichis();

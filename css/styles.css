@@ -71,7 +71,7 @@ body {
 }
 
 input[type=file]::file-selector-button {
-    background-color: orangered;
+    background-color: rgb(218, 54, 42);
     margin: 1rem;
     font-size: .8rem;
     color: white;
@@ -121,7 +121,7 @@ input[type=file]::file-selector-button {
 }
 
 .button-style-submit {
-    background-color: rgb(53, 100, 94);
+    background-color: rgb(72, 72, 155);
     font-size: .8rem;
     color: white;
     font-weight: bold;
